@@ -25,6 +25,10 @@
         <argument
             android:name="difficulty"
             app:argType="string" />
+        <action
+            android:id="@+id/action_gameFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -36,4 +40,17 @@
         android:name="com.example.guessthenumber.HowtoPlayFragment"
         android:label="fragment_howto_play"
         tools:layout="@layout/fragment_howto_play" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.guessthenumber.ResultFragment"
+        android:label="ResultFragment" >
+        <argument android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="diff"
+            app:argType="string" />
+    </fragment>
 </navigation>

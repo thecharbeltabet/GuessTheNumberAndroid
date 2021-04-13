@@ -35,18 +35,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.45" />
 
         <TextView
             android:id="@+id/Difficulty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
             android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/ScoreView"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CheckBtn" />
 
@@ -78,16 +77,16 @@
             app:layout_constraintTop_toBottomOf="@+id/NumberGuess"
             app:layout_constraintVertical_bias="0.65999997" />
 
-        <TextView
-            android:id="@+id/ScoreView"
+        <Button
+            android:id="@+id/EndButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="TextView"
-            app:layout_constraintBottom_toTopOf="parent"
+            android:text="End Game"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Difficulty" />
+            app:layout_constraintStart_toEndOf="@+id/Difficulty"
+            app:layout_constraintTop_toBottomOf="@+id/CheckBtn"
+            app:layout_constraintVertical_bias="0.65" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
