@@ -18,7 +18,14 @@
         android:id="@+id/gameFragment"
         android:name="com.example.guessthenumber.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="difficulty"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.guessthenumber.AboutFragment"

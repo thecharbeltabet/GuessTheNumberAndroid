@@ -21,8 +21,21 @@ class MainFragment : Fragment() {
         //return inflater.inflate(R.layout.fragment_main, container, false)
         val binding: FragmentMainBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_main,container,false)
         binding.StartButton.setOnClickListener { view: View ->
-            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_gameFragment)
+            val checkID = binding.RadioGroup.checkedRadioButtonId
+
+            if(-1 != checkID)
+            {
+                when(checkID)
+                {
+                    R.id.radioButtonEasy -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(),"easy"))
+                    R.id.radioButtonMedium -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(),"medium"))
+                    R.id.radioButtonHard -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(),"hard"))
+                }
+            }
+
         }
+
+
 
         return binding.root
     }
