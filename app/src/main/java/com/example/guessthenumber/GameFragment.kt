@@ -40,17 +40,23 @@ class GameFragment : Fragment() {
         fun generatedRand() {
             if (diff == "easy") {
                 rand = (1..5).random()
+                binding.textView.text = "Your Guess should be between 1 and 5 inclusive"
 
 
             } else if (diff == "medium") {
 
                 rand = (1..15).random()
+                binding.textView.text = "Your Guess should be between 1 and 15 inclusive"
+
             } else if (diff == "hard") {
                 rand = (1..25).random()
+                binding.textView.text = "Your Guess should be between 1 and 25 inclusive"
             }
 
 
         }
+
+
 
 
         fun checkScore(sc: Int) {

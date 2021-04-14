@@ -1,5 +1,6 @@
 package com.example.guessthenumber
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.guessthenumber.databinding.FragmentResultBinding
+
 
 class ResultFragment : Fragment() {
 
@@ -22,12 +24,37 @@ class ResultFragment : Fragment() {
 
         if (args.score == 0)
         {
-            binding.textView5.text = "Hard Luck " + args.name + " ! In " + args.diff + " Game Mode you got a Score of: " + args.score.toString() + "  Try Again Later"
+            binding.textView5.text = "Hard Luck, " + args.name + " got a score of  " + args.score.toString() + " In " + args.diff + " Game Mode."+ "  Try Again Later."
         }
         else
         {
-            binding.textView5.text = "Congratulations " + args.name + " ! In " + args.diff + " Game Mode you got a Score of: " + args.score.toString()
+            binding.textView5.text = "Congratulations, " + args.name + " got a score of  " + args.score.toString() + " In " + args.diff + " Game Mode."
         }
+
+            val message = binding.textView5.text.toString() + " Can you beat it ? Come have a try "
+
+            binding.ShareBtn.setOnClickListener {
+                /*Intent(Intent.ACTION_SEND).apply{
+                    type = "text/plain"
+                    putExtra(MY_MESSAGE,"This is an automated message sent by guess the number game")
+                }.also {
+                    startActivity(it)
+                }*/  // Didn't work
+
+                val sendIntent: Intent = Intent().apply {
+                    action = Intent.ACTION_SEND
+                    putExtra(Intent.EXTRA_TEXT,message)
+                    type = "text/plain"
+                }
+
+                val shareIntent = Intent.createChooser(sendIntent, null)
+                startActivity(shareIntent)
+            }
+
+
+
+
+
         return binding.root
     }
 
