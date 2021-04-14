@@ -28,7 +28,7 @@ class ResultFragment : Fragment() {
         }
         else
         {
-            binding.textView5.text = "Congratulations, " + args.name + " got a score of  " + args.score.toString() + " In " + args.diff + " Game Mode."
+            binding.textView5.text = "Congratulations, " + args.name + " got a score of " + args.score.toString() + " in " + args.diff + " Game Mode."
         }
 
             val message = binding.textView5.text.toString() + " Can you beat it ? Come have a try "

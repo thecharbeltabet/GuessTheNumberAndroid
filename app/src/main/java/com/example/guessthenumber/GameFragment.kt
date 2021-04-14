@@ -75,14 +75,19 @@ class GameFragment : Fragment() {
                 if (guess == "") {
                     val text = "You should enter a number"
                     val duration = Toast.LENGTH_SHORT
-                    val toast = Toast.makeText(context, text, duration).show()
+                    val toast = Toast.makeText(context, text, duration)
+                    toast.setGravity(Gravity.TOP or Gravity.LEFT, 350, 2050)
+                    toast.show()
 
                 } else {
                     var guessed = Integer.parseInt(guess)
                     if (guessed == rand) {
                         val text = "You Guessed it right"
                         val duration = Toast.LENGTH_SHORT
-                        val toast = Toast.makeText(context, text, duration).show()
+                        val toast = Toast.makeText(context, text, duration)
+                        toast.setGravity(Gravity.TOP or Gravity.LEFT, 400, 2050)
+                        toast.show()
+
                         score += 5
                         checkScore(score)
                         binding.YourName2.text = args.name + "'s score : " + score.toString()
@@ -90,7 +95,10 @@ class GameFragment : Fragment() {
                     } else {
                         val text = "You Guessed it wrong!"
                         val duration = Toast.LENGTH_SHORT
-                        val toast = Toast.makeText(context, text, duration).show()
+                        val toast = Toast.makeText(context, text, duration)
+                        toast.setGravity(Gravity.TOP or Gravity.LEFT, 400, 2050)
+                        toast.show()
+
                         score -= 1
                         checkScore(score)
                         binding.YourName2.text = args.name + "'s score : " + score.toString()
