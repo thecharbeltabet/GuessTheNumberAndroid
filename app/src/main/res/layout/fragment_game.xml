@@ -6,58 +6,47 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/YourName2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toTopOf="parent"
         tools:context=".GameFragment">
 
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:text="Game Fragment"
-            app:layout_constraintBottom_toTopOf="@+id/NumberGuess"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/YourName2"
-            app:layout_constraintVertical_bias="0.32" />
 
         <TextView
             android:id="@+id/YourName2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
+            android:fontFamily="sans-serif-black"
             android:text="Text"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
+            android:textColor="#264D59"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.45" />
+            app:layout_constraintVertical_bias="0.51" />
 
         <TextView
             android:id="@+id/Difficulty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
             android:text="TextView"
+            android:textColor="#264D59"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintEnd_toStartOf="@+id/EndButton"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CheckBtn" />
 
         <EditText
             android:id="@+id/NumberGuess"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_width="169dp"
+            android:layout_height="53dp"
             android:ems="10"
             android:gravity="center_horizontal"
             android:hint="Lucky Guess"
             android:inputType="number"
+            android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/CheckBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -66,27 +55,53 @@
 
         <Button
             android:id="@+id/CheckBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_width="233dp"
+            android:layout_height="59dp"
             android:text="Check My Guess"
-            app:layout_constraintBottom_toTopOf="@+id/Difficulty"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/EndButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/NumberGuess"
-            app:layout_constraintVertical_bias="0.65999997" />
+            app:layout_constraintTop_toBottomOf="@+id/NumberGuess" />
 
         <Button
             android:id="@+id/EndButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="End Game"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/Difficulty"
-            app:layout_constraintTop_toBottomOf="@+id/CheckBtn"
-            app:layout_constraintVertical_bias="0.65" />
+            app:layout_constraintTop_toBottomOf="@+id/CheckBtn" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="221dp"
+            android:layout_height="192dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/YourName2"
+            app:srcCompat="@drawable/ic_quest" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="TextView"
+            android:textColor="#43978D"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/NumberGuess"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

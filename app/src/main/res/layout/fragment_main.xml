@@ -6,44 +6,40 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
         tools:context=".MainFragment">
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:text="Landing Page"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/StartButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_width="162dp"
+            android:layout_height="50dp"
             android:text="Start"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-            app:layout_constraintVertical_bias="0.84000003" />
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="211dp"
+            android:layout_height="141dp"
+            android:tint="#205072"
+            app:layout_constraintBottom_toTopOf="@+id/YourName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_mainpage1" />
 
         <ScrollView
             android:id="@+id/scrollView2"
-            android:layout_width="314dp"
-            android:layout_height="356dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="311dp"
+            android:layout_height="253dp"
             app:layout_constraintBottom_toTopOf="@+id/StartButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/YourName">
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,26 +49,35 @@
                 <RadioGroup
                     android:id="@+id/RadioGroup"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#D1D1D1">
 
                     <RadioButton
                         android:id="@+id/radioButtonEasy"
                         android:layout_width="match_parent"
-                        android:layout_height="115dp"
+                        android:layout_height="80dp"
                         android:checked="true"
-                        android:text="Easy" />
+                        android:fontFamily="sans-serif-black"
+                        android:text="Easy"
+                        android:textColor="#264D59"
+                        app:useMaterialThemeColors="false" />
 
                     <RadioButton
                         android:id="@+id/radioButtonMedium"
                         android:layout_width="match_parent"
-                        android:layout_height="127dp"
-                        android:text="Medium" />
+                        android:layout_height="82dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Medium"
+                        android:textColor="#264D59" />
 
                     <RadioButton
                         android:id="@+id/radioButtonHard"
                         android:layout_width="match_parent"
-                        android:layout_height="114dp"
-                        android:text="Hard" />
+                        android:layout_height="90dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Hard"
+                        android:textColor="#264D59" />
+
                 </RadioGroup>
             </LinearLayout>
         </ScrollView>
@@ -81,18 +86,27 @@
             android:id="@+id/YourName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="400dp"
             android:ems="10"
             android:gravity="center"
             android:hint="Enter Your Name"
             android:inputType="textPersonName"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintBottom_toTopOf="@+id/StartButton"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.547"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Choose a difficulty:"
+            android:textColor="#264D59"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/YourName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

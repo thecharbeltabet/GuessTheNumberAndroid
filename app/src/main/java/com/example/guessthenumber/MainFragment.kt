@@ -1,5 +1,6 @@
 package com.example.guessthenumber
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -11,6 +12,9 @@ import com.example.guessthenumber.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
 
+
+
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -18,16 +22,26 @@ class MainFragment : Fragment() {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_main, container, false)
         val binding: FragmentMainBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+
+
+
+
+
         binding.StartButton.setOnClickListener { view: View ->
             val checkID = binding.RadioGroup.checkedRadioButtonId
 
+
+
+
+
             if(-1 != checkID && binding.YourName.text.toString() != "")
             {
+
                 when(checkID)
                 {
-                    R.id.radioButtonEasy -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(), "easy"))
-                    R.id.radioButtonMedium -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(), "medium"))
-                    R.id.radioButtonHard -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(), "hard"))
+                    R.id.radioButtonEasy -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(), "Easy"))
+                    R.id.radioButtonMedium -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(), "Medium"))
+                    R.id.radioButtonHard -> view.findNavController().navigate(MainFragmentDirections.actionMainFragmentToGameFragment(binding.YourName.text.toString(), "Hard"))
                 }
             }
             else {
@@ -41,12 +55,15 @@ class MainFragment : Fragment() {
 
 
 
+
+
         }
 
 
 
         return binding.root
     }
+
 
 
 

@@ -1,6 +1,7 @@
 package com.example.guessthenumber
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -23,6 +24,7 @@ class AboutFragment : Fragment() {
         val binding: FragmentAboutBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_about, container, false)
 
         binding.Gobutton.setOnClickListener {
+
             val webIntent: Intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ndu.edu.lb/academics/faculty-of-natural-applied-sciences/computer-science/computer-science"))
             startActivity(webIntent)
         }
