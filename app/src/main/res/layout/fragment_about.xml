@@ -2,30 +2,70 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintHorizontal_bias="0.5"
         tools:context=".AboutFragment">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="363dp"
             android:layout_height="wrap_content"
-            android:text="This game is implemented as a requirement for the CSC388 Course taught by Eddy Costantine at Notre Dame University "
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="This Application is implemented as a requirement for the CSC388 Course taught by Eddy Costantine at Notre Dame University "
+            android:textColor="@color/purple_700"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/Gobutton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <Button
             android:id="@+id/Gobutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="226dp"
+            android:layout_height="75dp"
+            android:fontFamily="sans-serif-black"
             android:text="Go to Website"
+            android:textColorHighlight="#2B78AF"
+            app:iconTint="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Project 1"
+            android:textColor="@color/purple_700"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="361dp"
+            android:layout_height="134dp"
+            app:tint="#16A085"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:srcCompat="@drawable/ic_capture1" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

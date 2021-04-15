@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.guessthenumber.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:label="Welcome"
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
@@ -17,8 +17,8 @@
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.example.guessthenumber.GameFragment"
-        android:label="fragment_game"
-        tools:layout="@layout/fragment_game" >
+        android:label="Game"
+        tools:layout="@layout/fragment_game">
         <argument
             android:name="name"
             app:argType="string" />
@@ -33,18 +33,19 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.guessthenumber.AboutFragment"
-        android:label="fragment_about"
+        android:label="About"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/howtoPlayFragment"
         android:name="com.example.guessthenumber.HowtoPlayFragment"
-        android:label="fragment_howto_play"
+        android:label="How To Play"
         tools:layout="@layout/fragment_howto_play" />
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.guessthenumber.ResultFragment"
-        android:label="ResultFragment" >
-        <argument android:name="score"
+        android:label="Results">
+        <argument
+            android:name="score"
             app:argType="integer" />
         <argument
             android:name="name"

@@ -26,7 +26,6 @@ class MainFragment : Fragment() {
 
 
 
-
         binding.StartButton.setOnClickListener { view: View ->
             val checkID = binding.RadioGroup.checkedRadioButtonId
 
